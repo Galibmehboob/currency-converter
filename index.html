@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Currency Converter</title>
+    <!-- Tailwind & daisyUi -->
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <!-- FontAwesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+        integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- Google Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400..900&display=swap" rel="stylesheet">
+    <!-- style -->
+    <link rel="stylesheet" href="Style/style.css">
+</head>
+
+<body class=" flex text-center justify-center mt-4 items-center min-h-screen bg-purple-200">
+
+    <div class="conatainer bg-white/40 py-8 rounded-lg  w-2/4">
+        <h2 class="text-3xl font-semibold">Currency Converter</h2>
+        <form class="m-8 space-y-4">
+            <div class="amount">
+                <p class="text-xl text-purple-800 font-semibold mb-2">Enter Amount</p>
+                <input id="amountEx"
+                    class="w-full border-none outline-none bg-gray-200 p-3 rounded-lg text-center text-lg font-bold"
+                    placeholder="Put Amount Here" type="number">
+            </div>
+            <div class="dropDown flex justify-around">
+                <!-- From -->
+                <div class="form text-left">
+                    <fieldset class="border border-gray-300 p-2 rounded-sm">
+
+                        <legend class="px-2 text-sm font-semibold">
+                            From
+                        </legend>
+
+                        <div class="flex items-center gap-2">
+                            <img class="w-10" src="https://flagsapi.com/US/flat/64.png" alt="">
+
+                            <select name="from" id="from"
+                                class="from bg-purple-200 border-none px-4 py-2 rounded-sm text-sm font-bold">
+
+                            </select>
+                        </div>
+
+                    </fieldset>
+                </div>
+                <!-- icon -->
+                <div class="flex justify-center items-center"> <i
+                        class="fa-solid fa-right-left text-4xl opacity-25"></i>
+                </div>
+                <!-- To -->
+                <div class="to text-left">
+
+                    <fieldset class="border border-gray-300 p-2 rounded-sm">
+
+                        <legend class="px-2 text-sm font-semibold">
+                            To
+                        </legend>
+
+                        <div class="flex items-center gap-2">
+                            <img class="w-10" src="https://flagsapi.com/BD/flat/64.png" alt="">
+
+                            <select name="to" id="to"
+                                class="to bg-purple-200 border-none px-4 py-2 rounded-sm text-sm font-bold">
+
+                            </select>
+                        </div>
+
+                    </fieldset>
+
+                </div>
+            </div>
+            <div class="finalMsg text-lg font-semibold mt-4">
+                <p id="finalMsg"></p>
+                <button class="btn bg-purple-500 text-white font-bold cursor-pointer">Get Exchange Rate</button>
+            </div>
+        </form>
+    </div>
+
+
+
+
+    <script src="script/script.js"></script>
+    <script src="script/code.js"></script>
+</body>
+
+</html>

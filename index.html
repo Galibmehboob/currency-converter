@@ -20,22 +20,21 @@
     <link rel="stylesheet" href="Style/style.css">
 </head>
 
-<body class=" flex text-center justify-center mt-4 items-center min-h-screen bg-purple-200">
+<body class="flex justify-center  items-center min-h-screen bg-purple-200 p-4">
 
-    <div class="conatainer bg-white/40 py-8 rounded-lg  w-2/4">
-        <h2 class="text-3xl font-semibold">Currency Converter</h2>
-        <form class="m-8 space-y-4">
+    <div class="conatainer bg-white/40 py-8 rounded-lg w-full sm:w-3/4 md:w-2/4 lg:w-2/4 px-4 sm:px-6">
+        <h2 class="text-2xl sm:text-3xl font-semibold text-center mb-4">Currency Converter</h2>
+        <form class="space-y-4">
             <div class="amount">
-                <p class="text-xl text-purple-800 font-semibold mb-2">Enter Amount</p>
+                <p class="text-lg sm:text-xl text-purple-800 font-semibold mb-2">Enter Amount</p>
                 <input id="amountEx"
-                    class="w-full border-none outline-none bg-gray-200 p-3 rounded-lg text-center text-lg font-bold"
+                    class="w-full border-none outline-none bg-gray-200 p-3 rounded-lg text-center text-base sm:text-lg font-bold"
                     placeholder="Put Amount Here" type="number">
             </div>
-            <div class="dropDown flex justify-around">
+            <div class="dropDown flex flex-col sm:flex-row justify-around items-center gap-4">
                 <!-- From -->
-                <div class="form text-left">
+                <div class="form w-full sm:w-1/2 text-left">
                     <fieldset class="border border-gray-300 p-2 rounded-sm">
-
                         <legend class="px-2 text-sm font-semibold">
                             From
                         </legend>
@@ -44,7 +43,7 @@
                             <img class="w-10" src="https://flagsapi.com/US/flat/64.png" alt="">
 
                             <select name="from" id="from"
-                                class="from bg-purple-200 border-none px-4 py-2 rounded-sm text-sm font-bold">
+                                class="from bg-purple-200 border-none px-4 py-2 rounded-sm text-sm font-bold w-full">
 
                             </select>
                         </div>
@@ -52,14 +51,12 @@
                     </fieldset>
                 </div>
                 <!-- icon -->
-                <div class="flex justify-center items-center"> <i
-                        class="fa-solid fa-right-left text-4xl opacity-25"></i>
+                <div class="flex justify-center items-center text-purple-500">
+                    <i class="fa-solid fa-right-left text-2xl sm:text-4xl opacity-25"></i>
                 </div>
                 <!-- To -->
-                <div class="to text-left">
-
+                <div class="to w-full sm:w-1/2 text-left">
                     <fieldset class="border border-gray-300 p-2 rounded-sm">
-
                         <legend class="px-2 text-sm font-semibold">
                             To
                         </legend>
@@ -68,27 +65,26 @@
                             <img class="w-10" src="https://flagsapi.com/BD/flat/64.png" alt="">
 
                             <select name="to" id="to"
-                                class="to bg-purple-200 border-none px-4 py-2 rounded-sm text-sm font-bold">
+                                class="to bg-purple-200 border-none px-4 py-2 rounded-sm text-sm font-bold w-full">
 
                             </select>
                         </div>
 
                     </fieldset>
-
                 </div>
             </div>
-            <div class="finalMsg text-lg font-semibold mt-4">
+            <div class="finalMsg text-lg font-semibold mt-4 text-center sm:text-left space-y-2">
                 <p id="finalMsg"></p>
-                <button class="btn bg-purple-500 text-white font-bold cursor-pointer">Get Exchange Rate</button>
+                <button
+                    class="btn w-full bg-purple-500 text-white font-bold py-2 px-4 rounded-lg hover:bg-purple-600 transition">
+                    Get Exchange Rate
+                </button>
             </div>
         </form>
     </div>
 
-
-
-
     <script src="script/script.js"></script>
-    <script src="script/code.js"></script>
+
 </body>
 
 </html>

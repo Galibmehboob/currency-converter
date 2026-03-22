@@ -81,7 +81,8 @@ btn.addEventListener("click", async (event) => {
     let rate = data[fromCur.value.toLowerCase()][toCur.value.toLowerCase()];
     let finalAmount = amount * rate;
 
-    msg.innerText = `${amount}-${fromCur.value} = ${finalAmount.toFixed(2)}-${toCur.value}`
+    msg.innerHTML = `${amount}-${fromCur.value} = <span class="text-green-500">${finalAmount.toFixed(2)}</span>-${toCur.value}`
+
 
     console.log(`Converted Amount: ${finalAmount.toFixed(2)}`);
 });
